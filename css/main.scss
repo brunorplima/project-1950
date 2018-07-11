@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth');
+
+//fonts
+$titles-font: 'Amaranth', sans-serif;
+
+//colors
+$bg1: #f2f2f2;
+$bg2: #d0f9cf;
+
+$cl1: #d0f9cf;
+$cl1: #d0f9cf;
+$cl1: #d0f9cf;
+$cl1: #d0f9cf;
+$cl1: #d0f9cf;
+
+$h2: #84bc9c;
+
+
+
+@mixin transitions ($transition) {
+	-webkit-transition: $transition;  
+	-moz-transition:    $transition;
+	-ms-transition:     $transition; 
+    -o-transition:      $transition;
+    transition:         $transition;  
+}
+
+
+h1, h2, h3{
+    font-family: $titles-font;
+}
+h1{
+    font-size: 2em;
+}
+h3{
+    // display: block;
+    background-color: red;
+    color: red;
+}
+
+ul{
+    list-style: none;
+}
+
+#banner{
+    height: 20em;
+    width: 100%;
+    background-image:  url("/project-1950/img/home-banner3.jpg");
+    background-attachment: fixed;
+    background-size: contain;
+    position: relative;
+    #rgba{
+        background-color: rgba(0, 0, 0, .5);
+        color: white;
+        height: 100%;
+    }
+    #course-name{
+        font-family: $titles-font;
+        font-size: 2em;
+    }
+    #some-links{
+        li{
+            display: inline-block;
+            margin-left: .5em;
+        }
+        a{
+            color: white;
+            padding: .5em;
+            border-bottom: .1em solid #fff;
+            @include transitions(.4s);
+        }
+        a:hover{
+            text-decoration: none;
+            background-color: #fff;
+        }
+    }
+}
+
+#nav-div{
+    border-bottom: .1em solid lightgray;
+    box-shadow: .3em .3em .8em -1em #333;
+}
+
+#dropdown1{
+    position: relative;    
+    #menu-dropdown1{
+        position: absolute;
+        top: 2em;
+    }
+}
+
+#more-dropdown2{
+    position: relative;    
+    #menu-dropdown2{
+        position: absolute;
+        top: 2em;
+    }
+}
+
+#main-content{
+    background-color: $bg1;
+}
+#btns{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    a{
+        display: inline-block;
+        padding: .5em 1.5em;
+        border: .1em solid $color4;
+        color: black;
+        @include transitions(.4s);
+    }
+    a:hover{
+        text-decoration: none;
+        background-color: $color4;
+    }
+}
+
+main, aside{
+    padding: 1em;
+}
+
+aside{
+    background-color: $cl1;
+}
+
+#mc{
+    background-color: $bg1;
+}
+
+
+
+
+
+footer{
+    background-color: $color1;
+    padding: 1em;
+    a{
+        color: white;
+        border: .1em solid white;
+        padding: .5em;
+        @include transitions(.4s);
+    }
+    a:hover{
+        color: black;
+        background-color: white;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px){
+    #some-links{
+        li{
+            display: block;
+            margin-bottom: 1em;
+            margin-right: 0;
+        }a{
+            padding: .1em;
+        }
+    }
+    #banner{
+        height: 17em;
+        h1{
+            font-size: 2em;
+        }
+    }
+}
+@media screen and (max-width: 1015px){
+    #banner{
+        height: 14em;
+        h1{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: .8em;
+        }
+    }
+}
+@media screen and (max-width: 991){
+    #banner{
+        #some-links{
+            a{
+                background-color: #9FA0FF;
+                padding: .2em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840px){
+    #banner{
+        background-image:  url("/project-1950/img/home-banner-mini.jpg");
+        background-attachment: fixed;
+        background-size: contain;
+        h1{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: .5em;
+        }#some-links{
+            a{
+                background-color: #9FA0FF;
+                padding: .2em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px){
+    #banner{
+        background-size: unset;
+        background-position-x: 90%;
+        #course-name{
+            position: absolute;
+            left: 3.3em;
+            h1{
+                font-size: 1.1em;
+            }
+            p{
+                font-size: .5em;
+            }
+        }
+        #some-links{
+            position: absolute;
+            top: 0;
+            right: 1em;
+            ul{
+                li{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

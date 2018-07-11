@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css?family=Amaranth");
+h1, h2, h3 {
+  font-family: "Amaranth", sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+ul {
+  list-style: none;
+}
+
+#banner {
+  height: 20em;
+  width: 100%;
+  background-image: url("/project-1950/img/home-banner3.jpg");
+  background-attachment: fixed;
+  background-size: contain;
+  position: relative;
+}
+
+#banner #rgba {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 100%;
+}
+
+#banner #course-name {
+  font-family: "Amaranth", sans-serif;
+  font-size: 2em;
+}
+
+#banner #some-links li {
+  display: inline-block;
+  margin-left: .5em;
+}
+
+#banner #some-links a {
+  color: white;
+  padding: .5em;
+  border-bottom: 0.1em solid #9FA0FF;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#banner #some-links a:hover {
+  text-decoration: none;
+  background-color: #9FA0FF;
+}
+
+#nav-div {
+  border-bottom: .1em solid lightgray;
+  box-shadow: .3em .3em .8em -1em #333;
+}
+
+#dropdown1 {
+  position: relative;
+}
+
+#dropdown1 #menu-dropdown1 {
+  position: absolute;
+  top: 2em;
+}
+
+#more-dropdown2 {
+  position: relative;
+}
+
+#more-dropdown2 #menu-dropdown2 {
+  position: absolute;
+  top: 2em;
+}
+
+#main-content {
+  background-color: #f2f2f2;
+}
+
+#btns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#btns a {
+  display: inline-block;
+  padding: .5em 1.5em;
+  border: 0.1em solid #BBADFF;
+  color: black;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#btns a:hover {
+  text-decoration: none;
+  background-color: #BBADFF;
+}
+
+main, aside {
+  padding: 1em;
+}
+
+aside {
+  background-color: #d0f9cf;
+}
+
+#mc {
+  background-color: #f2f2f2;
+}
+
+footer {
+  background-color: #555;
+  padding: 1em;
+}
+
+footer a {
+  color: white;
+  border: .1em solid white;
+  padding: .5em;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+footer a:hover {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  #some-links li {
+    display: block;
+    margin-bottom: 1em;
+    margin-right: 0;
+  }
+  #some-links a {
+    padding: .1em;
+  }
+  #banner {
+    height: 17em;
+  }
+  #banner h1 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 1015px) {
+  #banner {
+    height: 14em;
+  }
+  #banner h1 {
+    font-size: 1.5em;
+  }
+  #banner p {
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 991) {
+  #banner #some-links a {
+    background-color: #9FA0FF;
+    padding: .2em;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  #banner {
+    background-image: url("/project-1950/img/home-banner-mini.jpg");
+    background-attachment: fixed;
+    background-size: contain;
+  }
+  #banner h1 {
+    font-size: 1.5em;
+  }
+  #banner p {
+    font-size: .5em;
+  }
+  #banner #some-links a {
+    background-color: #9FA0FF;
+    padding: .2em;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #banner {
+    background-size: unset;
+    background-position-x: 90%;
+  }
+  #banner #course-name {
+    position: absolute;
+    left: 3.3em;
+  }
+  #banner #course-name h1 {
+    font-size: 1.1em;
+  }
+  #banner #course-name p {
+    font-size: .5em;
+  }
+  #banner #some-links {
+    position: absolute;
+    top: 0;
+    right: 1em;
+  }
+  #banner #some-links ul li {
+    display: inline-block;
+  }
+}
